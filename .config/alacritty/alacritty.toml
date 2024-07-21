@@ -1,0 +1,35 @@
+# Obtained form 
+import = [
+	"~/.config/alacritty/themes/catppuccin_mocha"
+]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding.x = 10
+padding.y = 10
+
+decorations = "Buttonless"
+
+opacity = 0.9
+
+option_as_alt = "Both"
+
+dimensions.columns = 100
+dimensions.lines = 30
+
+[font]
+normal.family = "JetBrains Mono"
+normal.style = "Regular"
+
+bold.family = "JetBrains Mono"
+bold.style = "Bold"
+
+italic.family = "JetBrains Mono"
+italic.style = "Italic"
+
+bold_italic.family = "JetBrains Mono"
+bold_italic.style = "Bold Italic"
+
+size = 12

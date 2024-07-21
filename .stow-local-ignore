@@ -1,0 +1,8 @@
+# All ignored files are not symlinked
+
+\.git
+\.gitignore
+
+^/README.*
+
+# ignore the initial install script
