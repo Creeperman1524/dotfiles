@@ -20,16 +20,16 @@ dimensions.columns = 100
 dimensions.lines = 30
 
 [font]
-normal.family = "JetBrains Mono"
+normal.family = "MesloLGS NF"
 normal.style = "Regular"
 
-bold.family = "JetBrains Mono"
+bold.family = "MesloLGS NF"
 bold.style = "Bold"
 
-italic.family = "JetBrains Mono"
+italic.family = "MesloLGS NF"
 italic.style = "Italic"
 
-bold_italic.family = "JetBrains Mono"
+bold_italic.family = "MesloLGS NF"
 bold_italic.style = "Bold Italic"
 
 size = 12
