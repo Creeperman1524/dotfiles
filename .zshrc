@@ -46,7 +46,3 @@ bindkey '^[[B' history-search-forward
 # Autocomplete
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Runs neofetch at the start of every session
-neofetch
-
