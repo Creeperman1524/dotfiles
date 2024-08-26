@@ -2,7 +2,22 @@ return {
 	"folke/noice.nvim",
 	event = "VeryLazy",
 	dependencies = {
-		"rcarriga/nvim-notify",
+		"MunifTanjim/nui.nvim",
+		{
+			"rcarriga/nvim-notify",
+			opts = {
+				timeout = 1000,
+				max_height = function()
+					return math.floor(vim.o.lines * 0.5)
+				end,
+				max_width = function()
+					return math.floor(vim.o.columns * 0.5)
+				end,
+				background_colour = "#000000",
+				render = "wrapped-compact",
+				stages = "fade",
+			},
+		},
 	},
 	-- recommended config
 	opts = {
