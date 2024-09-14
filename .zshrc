@@ -15,9 +15,12 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 alias reload-zsh="source ~/.zshrc"
 alias edit-zsh="nvim ~/.zshrc"
 
+# Configuring nvim
+alias edit-nvim="nvim ~/.dotfiles/.config/nvim/"
+
 # ssh
 alias discord-bot="ssh root@192.168.30.205"
-alias minecraft-server="ssh root@192.168.30.230"
+alias minecraft-server="ssh mcserver@192.168.40.2"
 
 # eza (better ls)
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
