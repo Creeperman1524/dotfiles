@@ -24,31 +24,47 @@ return {
 			},
 		})
 
+		-- Language Server Protocols
+		-- Enables error checking (messages on the side)
+		-- Can be further configured in lsp/lspconfig.lua
 		mason_lspconfig.setup({
 			-- list of servers for mason to install
 			ensure_installed = {
-				"ts_ls",
-				"html",
-				"cssls",
-				"tailwindcss",
-				"lua_ls",
-				"emmet_ls",
-				"pyright",
+				"html", -- html
+				"emmet_ls", -- html emmet support
 
-				"clangd",
+				"cssls", -- css
+				"tailwindcss", -- tailwind (css framework)
+
+				"ts_ls", -- javascript/typescript
+				"svelte", -- svelte (website framework)
+
+				"lua_ls", -- lua
+
+				"pyright", -- python
+
+				"clangd", -- c++
+
+				"java-language-server", -- java
 			},
 		})
 
+		-- Formatter and Linters
+		-- Formatters can be further configured in formatting.lua
+		-- Linters can be further configured in linting.lua
 		mason_tool_installer.setup({
 			ensure_installed = {
-				"prettier", -- prettier formatter
+				"prettier", -- prettier formatter (general formatter)
+
 				"stylua", -- lua formatter
-				-- "isort", -- python formatter
-				-- "black", -- python formatter
-				-- "pylint", -- python linter
+
+				"isort", -- python formatter
+				"black", -- python formatter
+				"pylint", -- python linter
+
 				"eslint_d", -- javascript/typescript linter
 
-				"clang-format", --c++ formatter
+				"clang-format", --c++, java formatter
 			},
 		})
 

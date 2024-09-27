@@ -40,6 +40,8 @@ return {
 				"python",
 				"regex",
 				"cpp",
+				"java",
+				"svelte",
 			},
 			incremental_selection = {
 				enable = true,
