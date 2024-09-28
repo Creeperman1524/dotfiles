@@ -45,7 +45,7 @@ return {
 
 				"clangd", -- c++
 
-				"java-language-server", -- java
+				-- "java-language-server", -- java
 			},
 		})
 
@@ -60,7 +60,8 @@ return {
 
 				"isort", -- python formatter
 				"black", -- python formatter
-				"pylint", -- python linter
+				"mypy", -- python linter
+				"debugpy", -- python DAP
 
 				"eslint_d", -- javascript/typescript linter
 

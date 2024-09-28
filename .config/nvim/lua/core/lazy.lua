@@ -18,6 +18,7 @@ require("lazy").setup({
 	spec = {
 		{ import = "plugins" },
 		{ import = "plugins.lsp" },
+		{ import = "plugins.dap" },
 	},
 	change_detection = {
 		notify = false,
