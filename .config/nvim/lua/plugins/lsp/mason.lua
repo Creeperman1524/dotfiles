@@ -61,11 +61,12 @@ return {
 				"isort", -- python formatter
 				"black", -- python formatter
 				"mypy", -- python linter
-				"debugpy", -- python DAP
+				"debugpy", -- python debugger
 
 				"eslint_d", -- javascript/typescript linter
 
 				"clang-format", --c++, java formatter
+				"codelldb", -- c++ debugger
 			},
 		})
 
