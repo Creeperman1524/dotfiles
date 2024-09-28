@@ -4,6 +4,7 @@ return {
 		"mfussenegger/nvim-dap",
 		"theHamsta/nvim-dap-virtual-text",
 		"nvim-neotest/nvim-nio",
+		"daic0r/dap-helper.nvim",
 	},
 	config = function()
 		local dap = require("dap")
@@ -13,7 +14,46 @@ return {
 			all_references = true,
 			virt_text_pos = "eol",
 		})
-		dapui.setup()
+
+		require("dap-helper").setup()
+
+		dapui.setup({
+			layouts = {
+				{
+					elements = {
+						{
+							id = "scopes",
+							size = 0.5,
+						},
+						{
+							id = "watches",
+							size = 0.5,
+						},
+					},
+					position = "left",
+					size = 35,
+				},
+				{
+					elements = {
+						{
+							id = "repl",
+							size = 0.5,
+						},
+						{
+							id = "console",
+							size = 0.5,
+						},
+					},
+					position = "bottom",
+					size = 10,
+				},
+			},
+			icons = {
+				collapsed = "",
+				current_frame = "",
+				expanded = "",
+			},
+		})
 
 		-- Opens the debuffer on attach
 		dap.listeners.before.attach.dapui_config = function()
@@ -46,6 +86,10 @@ return {
 		keymap.set("n", "<F5>", function()
 			require("dap").continue()
 		end, { desc = "Start/Continue the Debugger" })
+		keymap.set("n", "<F6>", function()
+			require("dap").terminate()
+			require("dapui").close()
+		end, { desc = "Terminate the Debugger" })
 		keymap.set("n", "<F10>", function()
 			require("dap").step_over()
 		end, { desc = "Step over" })

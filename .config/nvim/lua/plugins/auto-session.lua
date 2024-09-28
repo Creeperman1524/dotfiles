@@ -4,12 +4,19 @@ return {
 		local auto_session = require("auto-session")
 
 		auto_session.setup({
-			auto_save_enabled = true,
-			auto_restore_enabled = true,
-			auto_session_suppress_dirs = { "~/", "~/Downloads", "~/Documents", "~/Desktop/", "~/dev" },
+			auto_restore = true,
+			auto_save = true,
+			bypass_save_filetypes = { "alpha" },
+			suppressed_dirs = { "~/", "~/Downloads", "~/Documents", "~/Desktop/", "~/dev" },
+
+			pre_save_cmds = {
+				function()
+					require("dapui").close()
+				end,
+			},
 		})
 
-		vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+		vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,localoptions"
 
 		local keymap = vim.keymap
 
