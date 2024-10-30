@@ -53,6 +53,14 @@ mkdir -p /opt/nvim
 mv nvim.appimage /opt/nvim/nvim
 ```
 
+#### Polybar
+
+```bash
+sudo apt install polybar
+```
+
+A boostrap script to run the launch script is placed into `~./config/autostart`, this may change depending on distribution
+
 ### GNU Stow
 
 GNU Stow is used to manage symlinks of all the dotfiles and configurations. It is recommended to take a backup of existing files to not have them overwritten
