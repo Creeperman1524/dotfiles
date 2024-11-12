@@ -23,6 +23,14 @@ keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
+-- markdown
+keymap.set(
+	"n",
+	"<C-O>",
+	':s/- \\[\\([ x]\\)\\]/\\=submatch(1) == " " ? "- [x]" : "- [ ]"<CR>:nohl<CR>',
+	{ desc = "Toggle a markdown checkbox" }
+)
+
 -- Thanks to ThePrimeagen
 -- Move selections of text around
 keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selection up one line" })

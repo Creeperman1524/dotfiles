@@ -12,6 +12,7 @@ return {
 				typescriptreact = { "eslint_d" },
 				yaml = { "prettier" },
 				markdown = { "prettier" },
+				json = { "prettier" },
 				lua = { "stylua" },
 				python = { "isort", "black" },
 				cpp = { "clang-format" },
