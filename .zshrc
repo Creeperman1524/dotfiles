@@ -18,6 +18,9 @@ alias edit-zsh="nvim ~/.zshrc"
 # Configuring nvim
 alias edit-nvim="nvim ~/.dotfiles/.config/nvim/"
 
+# Running polybar
+alias runpolybar="~/.config/polybar/launch.sh"
+
 # ssh
 alias discord-bot="ssh root@192.168.30.205"
 alias minecraft-server="ssh mcserver@192.168.40.2"
