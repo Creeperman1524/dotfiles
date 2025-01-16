@@ -1,4 +1,3 @@
-# Obtained form 
 [general]
 import = [
 	"~/.config/alacritty/themes/catppuccin_mocha"
@@ -24,16 +23,8 @@ dimensions.lines = 30
 startup_mode = "Maximized"
 
 [font]
-normal.family = "MesloLGS NF"
-normal.style = "Regular"
+# https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/Ligatures/Medium/JetBrainsMonoNerdFontMono-Medium.ttf
+normal.family = "JetBrainsMono Nerd Font Mono"
 
-bold.family = "MesloLGS NF"
-bold.style = "Bold"
-
-italic.family = "MesloLGS NF"
-italic.style = "Italic"
-
-bold_italic.family = "MesloLGS NF"
-bold_italic.style = "Bold Italic"
-
-size = 12
+size = 13 # 13 for JetBrains
+offset.y = 1 # 1.2 for JetBrains
