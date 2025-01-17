@@ -63,7 +63,7 @@ return {
 				"mypy", -- python linter
 				"debugpy", -- python debugger
 
-				{ "eslint_d", version = "13.1.2", auto_update = false }, -- javascript/typescript linter (using downgraded version because of config file changes)
+				"eslint_d", -- javascript/typescript linter
 
 				"clang-format", --c++, java formatter
 				"codelldb", -- c++ debugger
