@@ -71,6 +71,18 @@ sudo apt install polybar
 
 A boostrap script to run the launch script is placed into `~./config/autostart`, this may change depending on distribution
 
+#### Zoxide
+
+A [program](https://github.com/ajeetdsouza/zoxide) to replace `cd` with a better version
+
+```
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+```
+
+Now, all you need to do is use `cd` to move around your directories normally, and it will begin to learn your most visited directories!
+
+Then, you can start using short-hand forms to access those frequently visited directories faster. Read the docs in the link above for more information.
+
 ### GNU Stow
 
 GNU Stow is used to manage symlinks of all the dotfiles and configurations. It is recommended to take a backup of existing files to not have them overwritten
