@@ -117,6 +117,17 @@ return {
 					},
 				})
 			end,
+			["ts_ls"] = function()
+				-- configure ts_ls server
+				lspconfig["ts_ls"].setup({
+					capabilities = capabilities,
+					init_options = {
+						preferences = {
+							disableSuggestions = true, -- suggestions are provided by eslint, may reenable this for it's better suggestions
+						},
+					},
+				})
+			end,
 		})
 	end,
 }
