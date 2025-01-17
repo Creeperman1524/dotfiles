@@ -23,7 +23,6 @@ dimensions.lines = 30
 startup_mode = "Maximized"
 
 [font]
-# https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/Ligatures/Medium/JetBrainsMonoNerdFontMono-Medium.ttf
 normal.family = "JetBrainsMono Nerd Font Mono"
 
 size = 13 # 13 for JetBrains

@@ -5,6 +5,15 @@ Cloning this repo will (nearly) replicate all settings and themes I have for my 
 
 ## Prerequisites
 
+### Fonts
+
+I've been playing around with a bunch of fonts. For now, I am between:
+
+- [JetBrains Mono](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/Ligatures/Medium/JetBrainsMonoNerdFontMono-Medium.ttf) (this is a special patched version that works with tmux)
+- [Meslo LG](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#manual-font-installation) (taken from the PowerLevel10k Github)
+
+My terminal fonts are set in [the alacritty config file](./.config/alacritty/alacritty.toml)
+
 ### Packages and Programs
 
 There are all the packages necessary to have every program work correctly.
