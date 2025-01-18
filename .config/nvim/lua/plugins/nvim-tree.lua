@@ -38,7 +38,10 @@ return {
 				},
 			},
 			filters = {
-				custom = { "^.git$" },
+				custom = { "^.git$", "^node_modules$" },
+			},
+			git = {
+				ignore = false,
 			},
 		})
 
