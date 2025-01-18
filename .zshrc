@@ -56,4 +56,6 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zoxide (better cd)
 export PATH="$HOME/.local/bin:$PATH" # add ~/.local/bin to $PATH
 
+alias zoxideHist="zoxide query -l -s | less"
+
 eval "$(zoxide init --cmd cd zsh)" # replaces cd
