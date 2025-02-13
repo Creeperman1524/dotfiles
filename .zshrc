@@ -59,3 +59,19 @@ export PATH="$HOME/.local/bin:$PATH" # add ~/.local/bin to $PATH
 alias zoxideHist="zoxide query -l -s | less"
 
 eval "$(zoxide init --cmd cd zsh)" # replaces cd
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/ant/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/ant/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/ant/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/ant/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
