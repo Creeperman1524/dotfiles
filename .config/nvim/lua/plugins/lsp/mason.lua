@@ -21,6 +21,7 @@ return {
 					package_pending = "➜",
 					package_uninstalled = "✗",
 				},
+				border = "rounded",
 			},
 		})
 
@@ -43,7 +44,7 @@ return {
 
 				"pyright", -- python
 
-				"clangd", -- c++
+				"clangd", -- c/c++
 
 				-- "java-language-server", -- java
 			},
@@ -65,8 +66,8 @@ return {
 
 				"eslint_d", -- javascript/typescript linter
 
-				"clang-format", --c++, java formatter
-				"codelldb", -- c++ debugger
+				"clang-format", -- c/c++, java formatter
+				"codelldb", -- c/c++ debugger
 			},
 		})
 

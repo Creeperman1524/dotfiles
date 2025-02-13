@@ -27,6 +27,9 @@ require("lazy").setup({
 		enabled = true,
 		notify = false,
 	},
+	ui = {
+		border = "rounded",
+	},
 })
 
 local keymap = vim.keymap
