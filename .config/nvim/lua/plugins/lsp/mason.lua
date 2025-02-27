@@ -47,6 +47,8 @@ return {
 				"clangd", -- c/c++
 
 				-- "java-language-server", -- java
+
+				"bashls", -- bash
 			},
 		})
 
@@ -68,6 +70,9 @@ return {
 
 				"clang-format", -- c/c++, java formatter
 				"codelldb", -- c/c++ debugger
+
+				"beautysh", -- bash formatter
+				"shellcheck", -- bash linter
 			},
 		})
 

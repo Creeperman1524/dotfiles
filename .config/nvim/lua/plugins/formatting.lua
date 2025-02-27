@@ -18,6 +18,8 @@ return {
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 				java = { "clang-format" },
+				sh = { "beautysh" },
+				bash = { "beautysh" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
@@ -25,6 +27,10 @@ return {
 				timeout_ms = 1000,
 			},
 		})
+
+		conform.formatters.beautysh = {
+			prepend_args = { "-t" },
+		}
 
 		vim.keymap.set({ "n", "v" }, "<leader>mp", function()
 			conform.format({
