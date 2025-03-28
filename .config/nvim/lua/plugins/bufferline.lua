@@ -5,7 +5,8 @@ return {
 	opts = {
 		options = {
 			mode = "tabs",
-			-- separator_style = "slant",
+			separator_style = "slant",
+			show_duplicate_prefix = false,
 		},
 	},
 }

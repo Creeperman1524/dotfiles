@@ -4,10 +4,6 @@ return {
 		require("nvim-highlight-colors").setup({
 			render = "foreground",
 
-			---Set virtual symbol (requires render to be set to 'virtual')
-			virtual_symbol = "●",
-			virtual_symbol_position = "inline",
-
 			enable_hex = true,
 			enable_short_hex = true,
 			enable_rgb = true,

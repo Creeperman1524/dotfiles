@@ -74,6 +74,12 @@ return {
 			float = { border = "rounded" },
 		})
 
+		-- disable background on virtual text warnings/errors (to look cleaner)
+		vim.cmd("hi DiagnosticVirtualTextError guibg=none")
+		vim.cmd("hi DiagnosticVirtualTextHint guibg=none")
+		vim.cmd("hi DiagnosticVirtualTextInfo guibg=none")
+		vim.cmd("hi DiagnosticVirtualTextWarn guibg=none")
+
 		-- used to enable autocompletion (assign to every lsp server config)
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 
