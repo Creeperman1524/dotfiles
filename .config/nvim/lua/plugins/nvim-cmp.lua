@@ -31,11 +31,12 @@ return {
 
 			window = {
 				completion = {
-					scrollbar = false,
-					border = "rounded",
+					border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+					winhighlight = "Normal:CmpPmenu,FloatBorder:CmpBorder,CursorLine:PmenuSel,Search:None",
 				},
 				documentation = {
-					border = "rounded",
+					border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+					winhighlight = "Normal:CmpPmenu,FloatBorder:CmpBorder,CursorLine:PmenuSel,Search:None",
 				},
 			},
 

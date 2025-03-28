@@ -17,13 +17,14 @@ opacity = 0.9
 
 option_as_alt = "Both"
 
-dimensions.columns = 100
-dimensions.lines = 30
-
 startup_mode = "Maximized"
+
+padding.x = 0
+padding.y = 0
+dynamic_padding = true
 
 [font]
 normal.family = "JetBrainsMono Nerd Font Mono"
 
 size = 13 # 13 for JetBrains
-offset.y = 1 # 1.2 for JetBrains
+offset.y = 2 # 1.2 for JetBrains
