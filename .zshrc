@@ -31,6 +31,10 @@ alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time
 # tree mode for htop
 alias htop="htop -t"
 
+# auto complete git branches
+# Thanks to https://stackoverflow.com/a/67627099/480608
+autoload -Uz compinit && compinit
+
 # -------------
 
 # Neovim path varialbe
