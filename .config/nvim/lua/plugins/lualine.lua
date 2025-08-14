@@ -12,7 +12,7 @@ return {
 			yellow = "#f9e2af",
 			red = "#f38ba8",
 			fg = "#c3ccdc",
-			bg = "#ffff",
+			bg = "#1e1e2e",
 			inactive_bg = "#ffff",
 			text = "#112638",
 		}
