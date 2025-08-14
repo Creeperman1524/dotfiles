@@ -56,10 +56,11 @@ yeah idk i think i used nvm and then used npm to update everything
 Taken from [here](https://github.com/neovim/neovim/blob/master/INSTALL.md#appimage-universal-linux-package), using an appimage
 
 ```bash
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
+cd ~/Downloads
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+chmod u+x nvim-linux-x86_64.appimage
 mkdir -p /opt/nvim
-mv nvim.appimage /opt/nvim/nvim
+mv nvim-linux-x86_64.appimage /opt/nvim/nvim
 sudo npm install --global yarn
 ```
 
