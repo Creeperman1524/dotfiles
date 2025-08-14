@@ -122,6 +122,7 @@ return {
 							-- make the language server recognize "vim" global
 							diagnostics = {
 								globals = { "vim" },
+								disable = { "missing-fields" },
 							},
 							completion = {
 								callSnippet = "Replace",
@@ -134,7 +135,6 @@ return {
 				-- configure ts_ls server
 				lspconfig["ts_ls"].setup({
 					capabilities = capabilities,
-					handlers = handlers,
 					init_options = {
 						preferences = {
 							disableSuggestions = true, -- suggestions are provided by eslint, may reenable this for it's better suggestions
