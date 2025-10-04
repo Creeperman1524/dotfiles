@@ -4,8 +4,8 @@ import = [
 ]
 
 [terminal]
-shell.program = "/usr/bin/tmux"
-shell.args = ["new", "-A", "-s", "dev"]
+shell.program = "/bin/sh"
+shell.args = ["-c", "exec $(which tmux) new -As dev"]
 
 [env]
 TERM = "xterm-256color"
