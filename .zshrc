@@ -64,6 +64,9 @@ alias zoxideHist="zoxide query -l -s | less"
 
 eval "$(zoxide init --cmd cd zsh)" # replaces cd
 
+# rust binaries
+export PATH="$HGOME/.cargo/bin:$PATH" # add ~/.cargo/bin
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/ant/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
