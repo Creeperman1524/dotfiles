@@ -8,6 +8,13 @@ return {
 	config = function()
 		-- import nvim-treesitter plugin
 		local treesitter = require("nvim-treesitter.configs")
+		local autotag = require("nvim-ts-autotag")
+
+		autotag.setup({
+			opts = {
+				enable_close_on_slash = true,
+			},
+		})
 
 		-- configure treesitter
 		treesitter.setup({ -- enable syntax highlighting
