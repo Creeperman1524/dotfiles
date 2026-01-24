@@ -20,6 +20,7 @@ return {
 				java = { "clang-format" },
 				sh = { "beautysh" },
 				bash = { "beautysh" },
+				nix = { "nixfmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

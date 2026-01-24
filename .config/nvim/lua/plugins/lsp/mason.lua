@@ -50,6 +50,7 @@ return {
 				-- "java-language-server", -- java
 
 				"bashls", -- bash
+				"nil_ls", -- nix
 			},
 		})
 
@@ -74,6 +75,8 @@ return {
 
 				"beautysh", -- bash formatter
 				"shellcheck", -- bash linter
+
+				"nixfmt", -- nix formatter
 			},
 		})
 

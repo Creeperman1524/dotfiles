@@ -50,6 +50,7 @@ return {
 				"cpp",
 				"java",
 				"svelte",
+				"nix",
 			},
 			incremental_selection = {
 				enable = true,
