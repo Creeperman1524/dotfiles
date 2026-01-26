@@ -3,6 +3,9 @@
 A repository full of dotfiles used for my configuration files.
 Cloning this repo will (nearly) replicate all settings and themes I have for my most used apps!
 
+> [!warning]
+> I have not updated this `README.md` with everything that I have installed to make these dotfiles work! Be warned!
+
 ## Prerequisites
 
 ### Fonts
@@ -29,6 +32,27 @@ sudo mv ~/.cargo/bin/eza /usr/bin
 ```bash
 sudo add-apt-repository ppa:aslatter/ppa -y
 sudo apt install alacritty
+```
+
+#### Kitty
+
+Taken from [here](https://sw.kovidgoyal.net/kitty/binary/)
+
+Install the binary
+
+```bash
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+```
+
+Make it appear in the app launcher as a proper app
+
+```bash
+ln -sf ~/.local/kitty.app/bin/kitty ~/.local/kitty.app/bin/kitten ~/.local/bin/
+cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
+cp ~/.local/kitty.app/share/applications/kitty-open.desktop ~/.local/share/applications/
+sed -i "s|Icon=kitty|Icon=$(readlink -f ~)/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty*.desktop
+sed -i "s|Exec=kitty|Exec=$(readlink -f ~)/.local/kitty.app/bin/kitty|g" ~/.local/share/applications/kitty*.desktop
+echo 'kitty.desktop' > ~/.config/xdg-terminals.list
 ```
 
 #### Zsh
