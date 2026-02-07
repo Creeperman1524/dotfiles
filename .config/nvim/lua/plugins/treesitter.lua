@@ -1,5 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	branch = "master", -- NOTE: pinned due to breaking changes in the main branch, should fix this
 	event = { "BufReadPre", "BufNewFile" },
 	build = ":TSUpdate", -- all language parsers are updated when loaded
 	dependencies = {
