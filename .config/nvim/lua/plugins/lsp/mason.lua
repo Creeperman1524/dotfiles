@@ -5,7 +5,22 @@ return {
 		{ "williamboman/mason-lspconfig.nvim", version = "v1.32.0" },
 		{ "WhoIsSethDaniel/mason-tool-installer.nvim", commit = "09caa3380a0e8532043bc417c04d1d6d31b6683b" },
 	},
-	config = function()
+	cmd = { "Mason" },
+	opts = {
+		ui = {
+			icons = {
+				package_installed = "✓",
+				package_pending = "➜",
+				package_uninstalled = "✗",
+			},
+			border = "rounded",
+		},
+	},
+	keys = {
+		{ "<leader>ma", "<cmd>:Mason<cr>", desc = "Open the Mason.nvim GUI" },
+	},
+	lazy = false,
+	config = function(_, opts)
 		-- import mason
 		local mason = require("mason")
 
@@ -15,16 +30,7 @@ return {
 		local mason_tool_installer = require("mason-tool-installer")
 
 		-- enable mason and configure icons
-		mason.setup({
-			ui = {
-				icons = {
-					package_installed = "✓",
-					package_pending = "➜",
-					package_uninstalled = "✗",
-				},
-				border = "rounded",
-			},
-		})
+		mason.setup(opts)
 
 		-- Language Server Protocols
 		-- Enables error checking (messages on the side)
@@ -79,8 +85,5 @@ return {
 				"nixfmt", -- nix formatter
 			},
 		})
-
-		local keymap = vim.keymap
-		keymap.set("n", "<leader>ma", "<cmd>:Mason<cr>", { desc = "Open the Mason.nvim GUI" })
 	end,
 }

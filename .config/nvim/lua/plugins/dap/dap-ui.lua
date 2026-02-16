@@ -6,6 +6,7 @@ return {
 		"nvim-neotest/nvim-nio",
 		"daic0r/dap-helper.nvim",
 	},
+	lazy = true,
 	config = function()
 		local dap = require("dap")
 		local dapui = require("dapui")
