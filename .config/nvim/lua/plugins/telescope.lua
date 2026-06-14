@@ -22,6 +22,9 @@ return {
 
 		telescope.setup({
 			defaults = {
+				preview = {
+					treesitter = false, -- new 'main' branch from treesitter not working, disable it in the preview
+				},
 				path_display = { "smart" },
 				prompt_prefix = "   ",
 				sorting_strategy = "ascending",

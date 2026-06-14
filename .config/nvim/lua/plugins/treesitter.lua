@@ -1,14 +1,13 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	branch = "master", -- NOTE: pinned due to breaking changes in the main branch, should fix this
+	branch = "main",
 	event = { "BufReadPre", "BufNewFile" },
 	build = ":TSUpdate", -- all language parsers are updated when loaded
 	dependencies = {
 		"windwp/nvim-ts-autotag",
 	},
 	config = function()
-		-- import nvim-treesitter plugin
-		local treesitter = require("nvim-treesitter.configs")
+		local treesitter = require("nvim-treesitter")
 		local autotag = require("nvim-ts-autotag")
 
 		autotag.setup({
@@ -17,51 +16,31 @@ return {
 			},
 		})
 
-		-- configure treesitter
-		treesitter.setup({ -- enable syntax highlighting
-			highlight = {
-				enable = true,
-			},
-			-- enable indentation
-			indent = { enable = true },
-
-			-- enable autotagging (w/ nvim-ts-autotag plugin)
-			autotag = {
-				enable = true,
-			},
-			-- ensure these language parsers are installed
-			ensure_installed = {
-				"json",
-				"javascript",
-				"typescript",
-				"tsx",
-				"yaml",
-				"html",
-				"css",
-				"markdown",
-				"markdown_inline",
-				"bash",
-				"lua",
-				"vim",
-				"dockerfile",
-				"gitignore",
-				"vimdoc",
-				"python",
-				"regex",
-				"cpp",
-				"java",
-				"svelte",
-				"nix",
-			},
-			incremental_selection = {
-				enable = true,
-				keymaps = {
-					init_selection = "<C-space>",
-					node_incremental = "<C-space>",
-					scope_incremental = false,
-					node_decremental = "<bs>",
-				},
-			},
+		-- install treesitter languages
+		treesitter.install({
+			"bash",
+			"cpp",
+			"css",
+			"dockerfile",
+			"gitignore",
+			"html",
+			"java",
+			"javascript",
+			"json",
+			"lua",
+			"markdown",
+			"markdown_inline",
+			"nix",
+			"python",
+			"regex",
+			"svelte",
+			"tsx",
+			"typescript",
+			"vim",
+			"vimdoc",
+			"yaml",
 		})
+
+		-- Note: Highlighting and other functionality is setup in core/lazy.lua, as it should be initialized by vim rather than lazy
 	end,
 }
